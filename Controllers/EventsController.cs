@@ -46,7 +46,7 @@ namespace MVCPlannerFinal.Controllers
             return View(@event);
         }
 
-        [Authorize(Roles = "Admin, Organizer")]
+        
         // GET: Events/Create
         public IActionResult Create()
         {
@@ -54,6 +54,7 @@ namespace MVCPlannerFinal.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin, Organizer")]
         // POST: Events/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -71,6 +72,8 @@ namespace MVCPlannerFinal.Controllers
             return View(@event);
         }
 
+
+        [Authorize(Roles = "Admin, Organizer")]
         // GET: Events/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -88,6 +91,8 @@ namespace MVCPlannerFinal.Controllers
             return View(@event);
         }
 
+
+        [Authorize(Roles = "Admin, Organizer")]
         // POST: Events/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -124,6 +129,7 @@ namespace MVCPlannerFinal.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin, Organizer")]
         // GET: Events/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -143,6 +149,7 @@ namespace MVCPlannerFinal.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin, Organizer")]
         // POST: Events/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
