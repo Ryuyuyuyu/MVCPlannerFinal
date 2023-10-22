@@ -24,5 +24,18 @@ namespace MVCPlannerFinal.Models
         // Navigation property for Tickets
         public virtual List<Ticket>? Tickets { get; set; } = null!;
         //public virtual ICollection<car>? Cars {get; set; }
+
+        public void ReduceParticipants(int count)
+        {
+            if (Participants >= count)
+            {
+                Participants -= count;
+                Console.WriteLine($"Reduced {count} participants. Remaining participants: {Participants}");
+            }
+            else
+            {
+                Console.WriteLine("Desired count exceeds current participants. Cannot reduce.");
+            }
+        }
     }
 }
