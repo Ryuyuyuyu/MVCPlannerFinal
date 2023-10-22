@@ -6,13 +6,42 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            height: 100%;
+        }
 
-@if (User.IsInRole("Admin"))
-{
-    <h1>Hi Admin</h1>
-}
+        .bg {
+            /* The image used */
+            background-image: url("/Images/Zuyd tafel.jpg");
+            /* Full height */
+            height: 50%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg">
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="text-center">
+                <h1>Hi Admin</h1>
+                <h2>Dit is de Admin pagina dia veel crud heeft</h2>
+            </div>
+        }
+    </div>
+
+</body>
+</html>

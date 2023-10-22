@@ -48,17 +48,18 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h3>Use another service to log in.</h3>
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
+                    // <div>
+                    //     <p>
+                    //         There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                    //             article
+                    //             about setting up this ASP.NET application to support logging in via external services
+                    //         </a>.
+                    //     </p>
+                    // </div>
                 }
                 else
                 {
@@ -74,6 +75,7 @@
                     </form>
                 }
             }
+            <img src="~/Images/Cristiano_Ronaldo_WC2022_-_01.jpg" alt="Cristiano Ronaldo" />
         </section>
     </div>
 </div>
